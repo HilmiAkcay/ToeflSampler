@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sss.toeflsampler.TranslateActivity">
+
+    <EditText
+        android:id="@+id/txtTranslate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:maxLines="10"
+        android:minLines="6"
+        android:scrollbars="vertical" />
+
+    <Button
+        android:id="@+id/btnTranslate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTranslate"
+        android:layout_centerHorizontal="true"
+        android:onClick="btnTranslate_Click"
+        android:text="Translate" />
+
+</RelativeLayout>

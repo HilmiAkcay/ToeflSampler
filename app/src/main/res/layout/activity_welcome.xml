@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDarkGray"
+
+    tools:context="com.example.sss.toeflsampler.WelcomeActivity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginTop="3px"
+            android:fontFamily="cursive"
+            android:text="Toefl Wise"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+        <View
+            android:id="@+id/viewHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0.5mm"
+            android:layout_gravity="top"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorGreen" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight=".32"
+                    android:background="#85b3db"
+                    android:gravity="center"
+
+                    android:onClick="btnDictionary_Click"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/dictionary3"
+                        android:tint="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_text"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:text="Dictionary"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/font_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight=".32"
+                    android:background="#e08e31"
+                    android:gravity="center"
+                    android:onClick="btnQuiz_Click"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_text"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:text="Quiz"
+                        android:textSize="@dimen/font_size" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/quiz2"
+                        android:tint="@color/colorGreen" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight=".32"
+                    android:background="#f268ad"
+                    android:gravity="center"
+                    android:onClick="btnTranslate_Click"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_text"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:text="Translate"
+                        android:textSize="@dimen/font_size" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/translate" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight=".32"
+                    android:background="@color/colorLightGreen"
+                    android:gravity="center"
+                    android:onClick="btnQuiz_Click"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/config"
+                        android:tint="@color/colorDarkGray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_text"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:text="Settings"
+                        android:textSize="@dimen/font_size" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewVertical"
+            android:layout_width="0.5mm"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorGreen" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
