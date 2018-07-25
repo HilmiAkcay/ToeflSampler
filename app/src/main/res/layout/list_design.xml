@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+    <TextView
+        android:id="@+id/engWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rihanna Love the way lie"
+        android:textColor="#040404"
+        android:typeface="sans"
+        android:textSize="15dip"
+        android:textStyle="bold"/>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/detailLayout"
+        android:layout_below="@id/engWord"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/engWord"
+            android:textColor="#343434"
+            android:textSize="10dip"
+            android:layout_marginTop="1dip"
+            android:text="Just gona stand there and ..." />
+
+        <TextView
+            android:id="@+id/seperator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/engWord"
+            android:textColor="#343434"
+            android:textSize="10dip"
+            android:layout_marginTop="1dip"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="|" />
+
+
+        <TextView
+            android:id="@+id/txtViewWordHardness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#d16202"
+            android:textSize="10dip"
+            android:layout_marginTop="1dip"
+            android:text="Hard..." />
+
+</LinearLayout >
+
+
+    <TextView
+        android:id="@+id/engSample"
+        android:layout_below="@id/detailLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Example of word"
+        android:textColor="#343434"
+        android:visibility="gone"
+        android:typeface="sans"
+        android:textSize="12dip"
+        android:textStyle="normal"/>
+
+
+    <ImageView android:layout_width="wrap_content"
+        android:id="@+id/forwardId"
+        android:layout_height="wrap_content"
+        android:src="@drawable/forward"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/trWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/forwardId"
+        android:layout_marginRight="5dp"
+        android:gravity="right"
+        android:text="5:45"
+        android:textSize="15dip"
+        android:textColor="#10bcc9"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

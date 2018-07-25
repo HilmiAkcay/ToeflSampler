@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sss.toeflsampler.QuizActivity">
+
+    <ImageView
+        android:id="@+id/quiz_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:maxHeight="240dip"
+        android:padding="5dip" />
+
+    <TextView
+        android:id="@+id/txtQuizQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textSize="24dip" />
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:id="@+id/txtTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:text="00:00"
+            android:textSize="15dip" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@color/colorLightGray" />
+
+        <TextView
+            android:id="@+id/txtQuestionCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:text="10/10"
+            android:textSize="15dip"
+            android:layout_below="@id/txtTimer"/>
+
+    </LinearLayout>
+
+
+
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtQuizQuestion"
+
+        android:orientation="vertical"
+        android:layout_marginTop="5dip"
+        android:layout_marginLeft="15dip">
+
+        <RadioButton
+            android:id="@+id/radio_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp" />
+
+        <RadioButton
+            android:id="@+id/radio_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp" />
+
+        <RadioButton
+            android:id="@+id/radio_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp" />
+
+        <RadioButton
+            android:id="@+id/radio_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_below="@id/radioGroup"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/colorLightGray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroup"
+        android:layout_margin="7dp">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/layoutNavigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/btnPrew"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="8dip"
+                android:background="#00000000"
+                android:onClick="btnPrew_Click"
+                android:scaleType="fitCenter"
+                android:src="@drawable/prew" />
+
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="8dip"
+                android:background="#00000000"
+                android:onClick="btnNext_Click"
+                android:scaleType="fitCenter"
+                android:src="@drawable/next" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/imgCorrect"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="8dip"
+                android:layout_gravity="center"
+                android:background="#00000000"
+                android:scaleType="fitCenter"
+                android:src="@drawable/tick"
+                android:tint="@color/colorGreen"/>
+
+
+            <TextView
+                android:id="@+id/txtCorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="10dip"
+                android:width="40dp"
+                android:background="@color/colorGreen"
+                android:layout_gravity="center"
+                android:text="0"
+                android:padding="4dp"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtWrong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="10dip"
+                android:width="45dp"
+                android:background="@color/colorRed"
+                android:layout_gravity="center"
+                android:text="0"
+                android:padding="4dp"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
